@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APBN Learning — Bab 6: BMN & BLU</title>
+<meta name="description" content="Website belajar interaktif Bab 6 Barang Milik Negara dan Badan Layanan Umum berdasarkan Rangkuman Bab 6 Modul Cerdas Cermat APBN 2026 Edisi V.">
+<style>
+:root{
+ --navy:#0b355d;--navy2:#174f7f;--gold:#e4ae24;--ink:#1b3349;--muted:#64788b;--bg:#f5f7fa;--card:#fff;--line:#d9e2ea;--soft:#edf4f9;--good:#18875f;--danger:#b44a3b;--shadow:0 12px 32px rgba(20,55,85,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.68}button,input{font:inherit}a{text-decoration:none;color:inherit}
+.topbar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 22px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(145deg,var(--gold),#f4cc60);display:grid;place-items:center;color:#fff;font-weight:1000;box-shadow:0 7px 18px rgba(228,174,36,.24)}.brand-title{font-size:13px;font-weight:950;letter-spacing:.11em;color:var(--navy)}.brand-sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42vw}.nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}.nav a{font-size:12px;font-weight:800;padding:8px 9px;border-radius:9px;color:#506579}.nav a:hover{background:var(--soft);color:var(--navy)}.icon-btn{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:17px}
+main{max-width:1180px;margin:auto}.section{padding:58px 24px}.hero{display:grid;grid-template-columns:1.35fr .8fr;gap:34px;align-items:center;padding-top:64px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--navy2);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:15px 0}.hero-lead{font-size:18px;color:#536a7d;max-width:780px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 16px;font-weight:850;cursor:pointer}.btn.primary{background:var(--navy);border:1px solid var(--navy);color:#fff}.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--navy)}.hero-card{min-height:330px;border-radius:24px;padding:28px;color:#fff;background:linear-gradient(155deg,var(--navy),#1c6095);box-shadow:var(--shadow);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}.hero-card:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;right:-80px;bottom:-105px;background:rgba(228,174,36,.18)}.hero-number{font-size:74px;font-weight:1000;line-height:1}.hero-mini{font-size:11px;letter-spacing:.15em;font-weight:950;opacity:.72}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.section-head h2{margin:6px 0 0;font-size:34px}.pill{background:#e9f1f7;color:var(--navy);font-size:12px;font-weight:850;padding:8px 12px;border-radius:999px}.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.map-card{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px;box-shadow:var(--shadow);transition:.2s}.map-card:hover{transform:translateY(-2px);border-color:#b5c9d8}.map-card .no{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:10px;background:#eaf2f8;color:var(--navy);font-weight:950}.map-card b{display:block;margin:12px 0 5px;font-size:18px}.map-card small{color:var(--muted)}
+.lesson{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;margin:23px 0;box-shadow:var(--shadow)}.lesson-head{display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:start}.chapter{width:62px;height:62px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:1000;font-size:22px}.lesson h3{margin:2px 0 4px;font-size:28px}.lesson h4{margin:28px 0 9px;font-size:20px;color:var(--navy)}.lesson p{margin:7px 0}.done-btn{border:1px solid var(--line);background:#fff;color:var(--navy);padding:8px 11px;border-radius:10px;font-weight:850;cursor:pointer}.done-btn.done{background:#e9f7f0;border-color:#b8e4cf;color:var(--good)}
+.definition,.callout,.warning{padding:16px 18px;border-radius:15px;margin:17px 0}.definition{background:#edf4f9;border-left:5px solid var(--navy)}.callout{background:#fff7df;border-left:5px solid var(--gold)}.warning{background:#fff1ef;border-left:5px solid var(--danger)}
+.grid2,.grid3,.grid4{display:grid;gap:13px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}.card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:16px}.card h5{margin:0 0 5px;color:var(--navy);font-size:16px}.card p{margin:4px 0;color:var(--muted);font-size:14px}.checklist{display:grid;gap:9px}.check{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);background:#fbfcfd;padding:12px 13px;border-radius:12px}.check b{color:var(--navy)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:15px;margin:13px 0}.table-wrap table{border-collapse:collapse;width:100%;min-width:740px;background:#fff}.table-wrap th,.table-wrap td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.table-wrap th{background:#edf4f9;color:var(--navy);font-size:13px}.table-wrap tr:last-child td{border-bottom:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tab{border:1px solid var(--line);background:#fff;color:#526779;border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer}.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.panel{display:none;border:1px solid var(--line);border-radius:15px;padding:16px;background:#fbfcfd}.panel.active{display:block}
+.flow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;background:#f7fafc;border:1px dashed #c8d6e0;border-radius:17px;padding:18px}.node{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:850;color:var(--navy)}.arrow{font-weight:1000;color:var(--gold)}
+.interactive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.interactive-card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:16px;cursor:pointer;transition:.18s}.interactive-card:hover{transform:translateY(-1px);border-color:#abc2d2}.interactive-card.selected{border:2px solid var(--gold);background:#fffaf0}.interactive-card h5{margin:0 0 5px;color:var(--navy)}.interactive-card p{margin:0;color:var(--muted);font-size:13px}.result{display:none;margin-top:12px;padding:13px;border-radius:13px;background:#eef8f3;border:1px solid #bee3ce}.result.show{display:block}
+.search-wrap{display:flex;gap:8px;align-items:center;margin:14px 0}.search-wrap input{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;outline:none}.search-wrap input:focus{border-color:#9db8cc;box-shadow:0 0 0 3px #eaf2f8}
+.progress-box{min-width:250px}.progress{height:9px;background:#e6edf2;border-radius:99px;overflow:hidden;margin-top:7px}.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--gold))}
+.summary{background:linear-gradient(145deg,var(--navy),#1c6095);color:#fff;border-radius:22px;padding:25px;box-shadow:var(--shadow)}.summary-points{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}.summary-points span{background:rgba(255,255,255,.09);padding:10px 12px;border-radius:11px;font-size:14px}
+.quiz-box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:var(--shadow)}.quiz-question{font-size:20px;font-weight:850;margin-bottom:12px}.quiz-option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;padding:11px 13px;border-radius:11px;margin:8px 0;cursor:pointer}.quiz-option:hover{background:#f7fafc}.quiz-option.correct{background:#edf9f2;border-color:#86d0a6}.quiz-option.wrong{background:#fff1ee;border-color:#e2a498}.quiz-feedback{margin-top:12px;padding:12px 13px;border-radius:12px;background:#f8fafc;border:1px dashed #c8d5df;display:none}.quiz-feedback.show{display:block}.quiz-actions{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.score{font-weight:900;color:var(--navy)}
+footer{max-width:1180px;margin:auto;padding:35px 24px 55px;color:#718294;font-size:12px;display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line)}
+body.dark{--bg:#0b1420;--card:#111e2d;--ink:#edf3f7;--muted:#9fb1c1;--line:#26384a;--soft:#162635}.dark .topbar,.dark .icon-btn,.dark .btn.ghost,.dark .done-btn,.dark .tab,.dark .quiz-option,.dark .search-wrap input{background:#0f1a27;color:var(--ink)}.dark .map-card,.dark .lesson,.dark .card,.dark .table-wrap table,.dark .interactive-card,.dark .quiz-box,.dark .panel{background:#111e2d}.dark .check,.dark .flow{background:#0f1b29}.dark .definition{background:#132333}.dark .callout{background:#2a2413}.dark .warning{background:#2a1715}.dark .table-wrap th{background:#17283a}
+@media(max-width:950px){.hero{grid-template-columns:1fr}.nav{display:none}.grid4{grid-template-columns:repeat(2,1fr)}.grid3,.interactive-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.section{padding:45px 16px}.topbar{padding:10px 14px}.brand-sub{display:none}.hero h1{font-size:44px}.map-grid,.grid2,.grid3,.interactive-grid,.summary-points{grid-template-columns:1fr}.grid4{grid-template-columns:1fr}.lesson{padding:20px}.lesson-head{grid-template-columns:auto 1fr}.done-btn{grid-column:2;justify-self:start}.section-head{align-items:flex-start;flex-direction:column}.hero-card{min-height:260px}}
+mark{background:#fff0ad;border-radius:3px;padding:0 2px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">6</div><div><div class="brand-title">APBN LEARNING</div><div class="brand-sub">Bab 6 • Barang Milik Negara & Badan Layanan Umum • Cerdas Cermat APBN 2026 Edisi V</div></div></div>
+  <nav class="nav"><a href="#bmn">BMN</a><a href="#siklus">Siklus BMN</a><a href="#pemanfaatan">Pemanfaatan</a><a href="#blu">BLU</a><a href="#syarat">Syarat</a><a href="#tarif">Tarif</a><a href="#kuis">Latsol</a></nav>
+  <button id="themeBtn" class="icon-btn" aria-label="Ganti tema">◐</button>
+</header>
+<main>
+<section class="section hero" id="top">
+  <div>
+    <span class="eyebrow">MODUL CERDAS CERMAT APBN 2026</span>
+    <h1>Bab 6: BMN & BLU</h1>
+    <p class="hero-lead">Pelajari seluruh materi pada dokumen <b>Rangkuman Bab 6 Barang Milik Negara dan Badan Layanan Umum</b> secara interaktif: dari definisi dan pejabat pengelola BMN, 11 tahapan siklus aset, bentuk pemanfaatan, sampai fleksibilitas, syarat, jenis, dan tarif layanan BLU.</p>
+    <div class="hero-actions"><a class="btn primary" href="#bmn">Mulai Belajar →</a><a class="btn ghost" href="#kuis">Langsung Latsol</a></div><div style="margin-top:18px;max-width:520px"><div style="display:flex;justify-content:space-between;font-size:12px;color:#637487;font-weight:800"><span>Progress bab</span><span id="progressText">0% selesai</span></div><div class="progress" style="margin-top:6px"><div id="progressBar"></div></div></div>
+  </div>
+  <div class="hero-card"><div><div class="hero-number">06</div><div class="hero-mini">KEUANGAN NEGARA</div></div><div><div style="font-size:38px">🏛️</div><div style="font-weight:900;font-size:20px">BMN + BLU</div><div style="opacity:.78;font-size:14px">Aset negara & layanan publik fleksibel</div></div></div>
+</section>
+
+<section class="section" id="peta">
+  <div class="section-head"><div><span class="eyebrow">PETA MATERI</span><h2>Kita Belajar Apa?</h2></div><span class="pill">6 bagian inti</span></div>
+  <div class="map-grid">
+    <a class="map-card" href="#bmn"><span class="no">1</span><b>Konsep Dasar BMN</b><small>Definisi, perolehan lain yang sah, pejabat, jenis, dan 6 asas.</small></a>
+    <a class="map-card" href="#siklus"><span class="no">2</span><b>Pengelolaan BMN</b><small>11 tahapan siklus dari perencanaan sampai pengawasan.</small></a>
+    <a class="map-card" href="#blu"><span class="no">3</span><b>Konsep Dasar BLU</b><small>Pengertian, tujuan, karakteristik, fleksibilitas, dan asas.</small></a>
+    <a class="map-card" href="#syarat"><span class="no">4</span><b>Perbandingan & Syarat BLU</b><small>Satker biasa vs BLU vs BUMN, lalu syarat substantif–teknis–administratif.</small></a>
+    <a class="map-card" href="#jenis"><span class="no">5</span><b>Jenis BLU</b><small>Penyedia barang/jasa, pengelola kawasan, dan pengelola dana khusus.</small></a>
+    <a class="map-card" href="#tarif"><span class="no">6</span><b>Tarif Layanan BLU</b><small>Dasar tarif, proses pengusulan, pertimbangan, bentuk, dan pelaporan.</small></a>
+  </div>
+  <div class="search-wrap"><input id="search" placeholder="Cari kata: BMN, KSP, BLU, tarif, RKBMN, BUMN, dll…" aria-label="Cari materi"></div>
+</section>
+
+<section class="section" id="bmn">
+<article class="lesson" data-search="konsep dasar BMN barang milik negara pengertian perolehan sah UUD 1945">
+  <div class="lesson-head"><div class="chapter">6.1</div><div><h3>Konsep Dasar Barang Milik Negara</h3><div class="muted">Definisi, dasar hukum, pejabat, jenis BMN, dan asas pengelolaan.</div></div><button class="done-btn" data-id="bmn"></button></div>
+  <div class="definition"><b>Definisi inti:</b> BMN = semua barang yang dibeli atau diperoleh atas beban APBN atau berasal dari perolehan lain yang sah.</div>
+  <p>BMN merupakan sumber daya ekonomi yang dikuasai atau dimiliki pemerintah dan digunakan untuk menjalankan pemerintahan serta layanan masyarakat.</p>
+  <h4>Perolehan lain yang sah</h4>
+  <div class="grid2">
+    <div class="card"><h5>Hibah atau sumbangan</h5><p>Contoh: pemerintah memperoleh hibah barang dari pemerintah negara lain atau lembaga internasional.</p></div>
+    <div class="card"><h5>Perjanjian atau kontrak</h5><p>Contoh: pemerintah menerima BMN setelah perusahaan asing menyelesaikan masa kontraknya dengan pemerintah.</p></div>
+    <div class="card"><h5>Ketentuan peraturan perundang-undangan</h5><p>Contoh: aset peninggalan penjajah/asing yang kemudian menjadi BMN.</p></div>
+    <div class="card"><h5>Putusan pengadilan berkekuatan hukum tetap</h5><p>Contoh: barang sitaan yang berdasarkan putusan pengadilan akhirnya menjadi BMN.</p></div>
+  </div>
+  <div class="callout"><b>Landasan konstitusional:</b> pengelolaan BMN merupakan pelaksanaan amanat UUD 1945 Pasal 33 ayat (3) dan paket undang-undang keuangan negara. Dalam konteks dokumen, kekayaan negara dikuasai negara dan digunakan sebesar-besarnya bagi kemakmuran rakyat.</div>
+  <h4>Pengelola dan Pengguna BMN</h4>
+  <div class="table-wrap"><table><thead><tr><th>Lingkup</th><th>Pejabat</th><th>Peran</th></tr></thead><tbody>
+    <tr><td>Pusat</td><td>Menteri Keuangan</td><td>Pengelola barang</td></tr><tr><td>Pusat</td><td>Menteri atau pimpinan lembaga</td><td>Pengguna barang</td></tr><tr><td>Pusat</td><td>Kepala satker</td><td>Kuasa pengguna barang</td></tr><tr><td>Daerah</td><td>Gubernur, bupati, atau wali kota</td><td>Pemegang kekuasaan pengelolaan barang daerah</td></tr><tr><td>Daerah</td><td>Sekretaris daerah</td><td>Pengelola barang daerah</td></tr><tr><td>Daerah</td><td>Kepala SKPD</td><td>Pengguna barang daerah</td></tr>
+  </tbody></table></div>
+  <h4>Jenis BMN</h4>
+  <div class="tabs"><button class="tab active" data-tab="persediaan">Persediaan</button><button class="tab" data-tab="tetap">Aset Tetap</button><button class="tab" data-tab="lain">Aset Lainnya</button></div>
+  <div class="panel active" data-panel="persediaan"><b>Persediaan:</b> ATK, obat-obatan, dan bahan baku.</div>
+  <div class="panel" data-panel="tetap"><b>Aset tetap:</b> tanah; peralatan dan mesin; gedung; jalan, irigasi, jaringan; koleksi perpustakaan; karya seni; hewan; dan konstruksi dalam pengerjaan.</div>
+  <div class="panel" data-panel="lain"><b>Aset lainnya:</b> aset kemitraan; aset tak berwujud seperti perangkat lunak dan paten; serta aset tetap yang dihentikan penggunaannya.</div>
+  <h4>6 Asas Pengelolaan BMN</h4>
+  <div class="interactive-grid" id="asasGrid">
+    <div class="interactive-card" data-title="Fungsional" data-detail="Keputusan diambil sesuai fungsi dan kewenangan pengelola atau pengguna."><h5>Fungsional</h5><p>Klik untuk detail.</p></div>
+    <div class="interactive-card" data-title="Kepastian hukum" data-detail="Pengelolaan berdasarkan hukum, kepatutan, dan keadilan."><h5>Kepastian hukum</h5><p>Klik untuk detail.</p></div>
+    <div class="interactive-card" data-title="Transparansi" data-detail="Masyarakat dapat memperoleh informasi dan berperan mengamankan BMN."><h5>Transparansi</h5><p>Klik untuk detail.</p></div>
+    <div class="interactive-card" data-title="Efisiensi" data-detail="BMN digunakan sesuai standar kebutuhan untuk mendukung tugas pemerintah."><h5>Efisiensi</h5><p>Klik untuk detail.</p></div>
+    <div class="interactive-card" data-title="Akuntabilitas publik" data-detail="Seluruh kegiatan dapat dipertanggungjawabkan kepada rakyat."><h5>Akuntabilitas publik</h5><p>Klik untuk detail.</p></div>
+    <div class="interactive-card" data-title="Kepastian nilai" data-detail="Jumlah dan nilai aset harus akurat untuk neraca dan pemindahtanganan."><h5>Kepastian nilai</h5><p>Klik untuk detail.</p></div>
+  </div><div class="result" id="asasResult"></div>
+</article>
+</section>
+
+<section class="section" id="siklus">
+<article class="lesson" data-search="siklus pengelolaan BMN perencanaan pengadaan penggunaan pemanfaatan pengamanan pemeliharaan penilaian pemindahtanganan pemusnahan penghapusan penatausahaan pengawasan">
+  <div class="lesson-head"><div class="chapter">6.2</div><div><h3>Ruang Lingkup Pengelolaan BMN</h3><div class="muted">11 tahapan siklus pengelolaan barang negara.</div></div><button class="done-btn" data-id="siklus"></button></div>
+  <div class="flow" id="flowBMN"><span class="node">1. Perencanaan & penganggaran</span><span class="arrow">→</span><span class="node">2. Pengadaan</span><span class="arrow">→</span><span class="node">3. Penggunaan</span><span class="arrow">→</span><span class="node">4. Pemanfaatan</span><span class="arrow">→</span><span class="node">5. Pengamanan & pemeliharaan</span><span class="arrow">→</span><span class="node">6. Penilaian</span><span class="arrow">→</span><span class="node">7. Pemindahtanganan</span><span class="arrow">→</span><span class="node">8. Pemusnahan</span><span class="arrow">→</span><span class="node">9. Penghapusan</span><span class="arrow">→</span><span class="node">10. Penatausahaan</span><span class="arrow">→</span><span class="node">11. Pembinaan, pengawasan & pengendalian</span></div>
+  <div class="callout"><b>Kata kunci:</b> siklus BMN bukan sekadar membeli aset. Siklusnya mencakup perencanaan hingga pengawasan dan pengendalian.</div>
+  <h4>Perencanaan, Pengadaan, dan Penggunaan</h4>
+  <div class="grid3">
+    <div class="card"><h5>RKBMN</h5><p>Rencana kebutuhan menghubungkan barang yang sudah tersedia dengan kebutuhan baru. Hasilnya adalah <b>Rencana Kebutuhan BMN (RKBMN)</b>. Perencanaan berpedoman pada standar barang, kebutuhan, dan harga serta menjadi dasar usulan baseline atau inisiatif baru.</p></div>
+    <div class="card"><h5>Pengadaan</h5><p>Berlangsung sejak identifikasi kebutuhan sampai serah terima dan harus efisien, efektif, transparan, terbuka, bersaing, adil, serta akuntabel.</p></div>
+    <div class="card"><h5>Penggunaan</h5><p>BMN dikelola sesuai tugas dan fungsi instansi, baik dipakai sendiri maupun dioperasikan pihak lain untuk pelayanan umum.</p></div>
+  </div>
+  <h4>Pengamanan & Pemeliharaan</h4>
+  <div class="table-wrap"><table><thead><tr><th>Jenis</th><th>Contoh</th></tr></thead><tbody>
+    <tr><td>Pengamanan fisik</td><td>Memagar area kantor agar aset tidak hilang atau rusak.</td></tr>
+    <tr><td>Pengamanan hukum</td><td>Mengurus sertifikat tanah sebagai bukti kepemilikan.</td></tr>
+    <tr><td>Pengamanan administrasi</td><td>Menginventarisasi dan mencatat BMN.</td></tr>
+    <tr><td>Pemeliharaan ringan</td><td>Membersihkan komputer secara rutin tanpa biaya khusus.</td></tr>
+    <tr><td>Pemeliharaan sedang</td><td>Servis AC berkala oleh tenaga terlatih.</td></tr>
+    <tr><td>Pemeliharaan berat</td><td>Memperbaiki gedung rusak oleh tenaga ahli.</td></tr>
+  </tbody></table></div>
+  <h4 id="pemanfaatan">Pemanfaatan BMN</h4>
+  <p>Pemanfaatan berarti pendayagunaan BMN yang tidak digunakan sesuai tugas pokok dan fungsi dan/atau optimalisasi BMN.</p>
+  <div class="table-wrap"><table><thead><tr><th>Bentuk</th><th>Penjelasan</th></tr></thead><tbody>
+    <tr><td>Pinjam Pakai</td><td>Penggunaan barang antar pemerintah tanpa imbalan untuk waktu tertentu dan harus dikembalikan.</td></tr>
+    <tr><td>Sewa</td><td>Pemanfaatan BMN oleh pihak lain dengan imbalan uang.</td></tr>
+    <tr><td>Bangun Guna Serah (BGS)</td><td>Mitra membangun di tanah pemerintah, memakai sebagian, lalu menyerahkan bangunan saat perjanjian berakhir.</td></tr>
+    <tr><td>Bangun Serah Guna (BSG)</td><td>Bangunan diserahkan lebih dahulu kepada pemerintah lalu dipakai pemerintah dan mitra sesuai perjanjian.</td></tr>
+    <tr><td>Kerja Sama Pemanfaatan (KSP)</td><td>Pendayagunaan BMN dengan mitra untuk meningkatkan PNBP atau sumber pembiayaan lain.</td></tr>
+    <tr><td>Kerja Sama Penyediaan Infrastruktur (KSPI)</td><td>Kerja sama pemerintah dan badan usaha untuk menyediakan infrastruktur.</td></tr>
+    <tr><td>Kerja Sama Terbatas Pembiayaan Infrastruktur (KETUPI)</td><td>Optimalisasi BMN untuk memperoleh pendanaan pembangunan infrastruktur lain.</td></tr>
+  </tbody></table></div>
+  <h4>Penilaian, Pemusnahan, dan Pemindahtanganan</h4>
+  <div class="grid2">
+    <div class="card"><h5>Penilaian</h5><p>Menghasilkan opini nilai wajar untuk laporan keuangan atau tindakan pengelolaan aset.</p></div>
+    <div class="card"><h5>Pemusnahan</h5><p>Dilakukan jika barang tidak dapat digunakan, dimanfaatkan, atau dipindahtangankan. Metodenya dapat berupa pembakaran, penghancuran, penimbunan, atau metode lain yang sah.</p></div>
+    <div class="card"><h5>Pemindahtanganan</h5><p>Kepemilikan berubah melalui penjualan, tukar menukar, hibah, atau penyertaan modal pemerintah.</p></div>
+    <div class="card"><h5>Penyertaan modal pemerintah</h5><p>Mengubah kekayaan negara yang tidak dipisahkan menjadi kekayaan yang dipisahkan pada BUMN, BUMD, atau badan hukum lain.</p></div>
+  </div>
+  <h4>Penghapusan, Penatausahaan, dan Pengawasan</h4>
+  <div class="grid3">
+    <div class="card"><h5>Penghapusan</h5><p>Membebaskan pengelola atau pengguna dari tanggung jawab fisik dan administrasi setelah barang tidak lagi berada dalam penguasaannya. Penyebab antara lain pemindahtanganan, pemusnahan, kehilangan, pencurian, kebakaran, penyusutan, atau pencairan.</p></div>
+    <div class="card"><h5>Penatausahaan</h5><p>Meliputi inventarisasi, pembukuan, dan pelaporan semesteran atau tahunan.</p></div>
+    <div class="card"><h5>Pembinaan, pengawasan, pengendalian</h5><p>Menteri Keuangan menetapkan kebijakan umum dan teknis. Pengguna memantau serta menertibkan aset, sedangkan pengelola dapat melakukan investigasi dan meminta audit.</p></div>
+  </div>
+  <div class="warning"><b>BMN idle:</b> tanah atau bangunan yang tidak dipakai untuk tugas K/L. Optimalisasinya dapat menggunakan analisis <i>highest and best use</i> agar manfaat meningkat dan biaya kepemilikan menurun.</div>
+</article>
+</section>
+
+<section class="section" id="blu">
+<article class="lesson" data-search="BLU badan layanan umum semiotonom nonprofit fleksibilitas pelayanan publik pendapatan belanja kas pengadaan">
+  <div class="lesson-head"><div class="chapter">6.3</div><div><h3>Konsep Dasar Badan Layanan Umum</h3><div class="muted">Pengertian, tujuan, karakteristik, fleksibilitas, dan asas BLU.</div></div><button class="done-btn" data-id="blu"></button></div>
+  <div class="definition"><b>Definisi inti:</b> BLU = instansi pemerintah semiotonom yang memberikan barang atau jasa kepada masyarakat tanpa mengutamakan keuntungan.</div>
+  <p>BLU menjalankan layanan kesehatan, pendidikan, pengelolaan dana, pengelolaan kawasan, penelitian, pelatihan, penyiaran, dan layanan publik lainnya.</p>
+  <p>Tujuannya meningkatkan kualitas pelayanan, menerapkan praktik bisnis yang sehat, dan memberi fleksibilitas pengelolaan berdasarkan produktivitas, efisiensi, dan efektivitas.</p>
+  <div class="grid2">
+    <div class="card"><h5>Laporan keuangan</h5><p>Sedikitnya memuat laporan realisasi anggaran atau operasional, neraca, arus kas, CaLK, serta laporan kinerja.</p></div>
+    <div class="card"><h5>BLU Pusat vs BLUD</h5><p>BLU pusat bertanggung jawab kepada pemerintah pusat, sedangkan BLUD berada dalam pemerintah daerah dan bertanggung jawab kepada kepala daerah.</p></div>
+  </div>
+  <h4>Fleksibilitas BLU</h4>
+  <div class="interactive-grid" id="flexGrid">
+    <div class="interactive-card" data-detail="Fleksibilitas anggaran mencakup pengelolaan pendapatan, belanja, kas, dan pengadaan barang/jasa."><h5>Anggaran</h5><p>Pendapatan • belanja • kas • pengadaan</p></div>
+    <div class="interactive-card" data-detail="BLU dapat mempekerjakan tenaga profesional non-ASN."><h5>Kepegawaian</h5><p>Dapat mempekerjakan tenaga profesional non-ASN</p></div>
+    <div class="interactive-card" data-detail="BLU dapat menerapkan remunerasi sesuai kontribusi pegawai."><h5>Remunerasi</h5><p>Imbalan sesuai kontribusi</p></div>
+    <div class="interactive-card" data-detail="Pendapatan layanan dapat digunakan langsung untuk membiayai kegiatan tanpa disetor terlebih dahulu ke kas negara. Ini merupakan pengecualian dari asas universalitas."><h5>Pendapatan</h5><p>Dapat digunakan langsung sesuai ketentuan</p></div>
+    <div class="interactive-card" data-detail="Belanja dapat bertambah sejalan dengan kenaikan volume layanan selama masih dalam ambang batas Rencana Bisnis dan Anggaran. Jika melebihi ambang batas, diperlukan persetujuan Menteri Keuangan."><h5>Flexible budget</h5><p>Menyesuaikan volume layanan</p></div>
+  </div><div class="result" id="flexResult"></div>
+  <h4>7 Asas BLU</h4>
+  <div class="checklist">
+    <div class="check"><b>1.</b><span>BLU tetap menjadi unit kerja K/L atau pemda dan menerima kewenangan dari instansi induknya.</span></div>
+    <div class="check"><b>2.</b><span>Status hukum BLU tidak terpisah dari instansi induk.</span></div>
+    <div class="check"><b>3.</b><span>Pimpinan instansi induk bertanggung jawab atas kebijakan dan manfaat layanan.</span></div>
+    <div class="check"><b>4.</b><span>Pejabat BLU bertanggung jawab atas pelaksanaan layanan.</span></div>
+    <div class="check"><b>5.</b><span>BLU tidak mengutamakan keuntungan.</span></div>
+    <div class="check"><b>6.</b><span>Rencana, anggaran, laporan keuangan, dan kinerja BLU menjadi bagian laporan instansi induk.</span></div>
+    <div class="check"><b>7.</b><span>Layanan dikelola sesuai praktik bisnis yang sehat.</span></div>
+  </div>
+</article>
+</section>
+
+<section class="section" id="syarat">
+<article class="lesson" data-search="satker biasa BLU BUMN perbandingan orientasi kekayaan manajemen pendapatan SDM pajak APBN syarat substantif teknis administratif">
+  <div class="lesson-head"><div class="chapter">6.3.2</div><div><h3>Perbandingan Satker, BLU, dan BUMN</h3><div class="muted">Bedakan status kelembagaan sebelum masuk syarat BLU.</div></div><button class="done-btn" data-id="syarat"></button></div>
+  <div class="table-wrap"><table><thead><tr><th>Aspek</th><th>Satker Biasa</th><th>BLU</th><th>BUMN</th></tr></thead><tbody>
+    <tr><td>Orientasi</td><td>Nonprofit</td><td>Not for profit</td><td>Profit</td></tr>
+    <tr><td>Kekayaan</td><td>Tidak dipisahkan</td><td>Tidak dipisahkan</td><td>Dipisahkan</td></tr>
+    <tr><td>Manajemen</td><td>Terpusat</td><td>Semiotonom</td><td>Otonom korporasi</td></tr>
+    <tr><td>Pendapatan</td><td>PNBP disetor</td><td>PNBP dilaporkan dan dapat dipakai</td><td>Pendapatan usaha</td></tr>
+    <tr><td>SDM</td><td>ASN</td><td>ASN dan non ASN</td><td>Pegawai perusahaan</td></tr>
+    <tr><td>Pajak</td><td>Bukan subjek</td><td>Bukan subjek</td><td>Subjek pajak</td></tr>
+    <tr><td>Dukungan APBN</td><td>Belanja</td><td>Belanja</td><td>Penyertaan modal</td></tr>
+  </tbody></table></div>
+  <h4 id="jenis">Syarat Menjadi BLU</h4>
+  <div class="table-wrap"><table><thead><tr><th>Syarat</th><th>Isi</th></tr></thead><tbody>
+    <tr><td><b>Substantif</b></td><td>Menyediakan layanan umum, mengelola kawasan atau dana khusus, menghasilkan barang atau jasa semipublik, dan tidak mencari laba.</td></tr>
+    <tr><td><b>Teknis</b></td><td>Kinerja layanan layak ditingkatkan dan kondisi keuangan sehat berdasarkan PNBP, rasio belanja pegawai, serta rasio keuangan.</td></tr>
+    <tr><td><b>Administratif</b></td><td>Pernyataan kesanggupan, pola tata kelola, rencana strategis bisnis, laporan keuangan, standar pelayanan minimum, dan laporan audit atau kesediaan diaudit.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><b>Alur usulan:</b> usulan disetujui menteri atau pimpinan lembaga lalu dinilai oleh Direktorat PPK BLU pada DJPb Kementerian Keuangan.</div>
+</article>
+</section>
+
+<section class="section" id="jenis-blu">
+<article class="lesson" data-search="jenis BLU penyedia barang jasa pengelola wilayah kawasan pengelola dana khusus rumah sakit perguruan tinggi LPDP PIP dana bergulir kelapa sawit">
+  <div class="lesson-head"><div class="chapter">6.3.3</div><div><h3>Jenis Badan Layanan Umum</h3><div class="muted">Pengelompokan BLU berdasarkan jenis layanannya.</div></div><button class="done-btn" data-id="jenis"></button></div>
+  <div class="table-wrap"><table><thead><tr><th>Jenis</th><th>Contoh</th></tr></thead><tbody>
+    <tr><td>Penyedia barang atau jasa</td><td>Rumah sakit pemerintah, perguruan tinggi negeri, balai pelatihan, dan pusat penelitian.</td></tr>
+    <tr><td>Pengelola wilayah atau kawasan</td><td>Otorita Batam dan kawasan pengembangan ekonomi terpadu.</td></tr>
+    <tr><td>Pengelola dana khusus</td><td>LPDP, Pusat Investasi Pemerintah, dana bergulir UMKM, dan dana kelapa sawit.</td></tr>
+  </tbody></table></div>
+  <div class="definition"><b>Inti yang sering tertukar:</b> BLU dibentuk untuk pelayanan umum dan berorientasi <i>not for profit</i>, tetapi tetap diberi fleksibilitas pengelolaan agar pelayanan lebih produktif, efisien, dan efektif.</div>
+</article>
+</section>
+
+<section class="section" id="tarif">
+<article class="lesson" data-search="tarif layanan BLU imbalan jasa biaya per unit investasi dana PMK 129 PMK 05 2020 tarif tinggi sama rendah pengusulan enam bulan tim penilai daya beli keadilan persaingan sehat nominal persentase indeks kurs formula pelaporan satu bulan">
+  <div class="lesson-head"><div class="chapter">6.4</div><div><h3>Tarif Layanan Badan Layanan Umum</h3><div class="muted">Cara tarif disusun, diusulkan, ditetapkan, dan dilaporkan.</div></div><button class="done-btn" data-id="tarif"></button></div>
+  <div class="definition"><b>Tarif</b> adalah imbalan atas jasa layanan dan dihitung berdasarkan biaya per unit layanan atau hasil investasi dana.</div>
+  <div class="grid3">
+    <div class="card"><h5>Tarif > biaya</h5><p>Kebijakan tarif dapat menetapkan tarif lebih tinggi daripada biaya penyediaan layanan.</p></div>
+    <div class="card"><h5>Tarif = biaya</h5><p>Kebijakan tarif dapat menetapkan tarif sama dengan biaya penyediaan layanan.</p></div>
+    <div class="card"><h5>Tarif < biaya</h5><p>Kebijakan tarif dapat menetapkan tarif lebih rendah daripada biaya penyediaan layanan.</p></div>
+  </div>
+  <h4>Proses Pengusulan Tarif</h4>
+  <div class="flow"><span class="node">Pemimpin BLU</span><span class="arrow">→</span><span class="node">Menteri/Pimpinan Lembaga</span><span class="arrow">→</span><span class="node">Menteri Keuangan</span><span class="arrow">→</span><span class="node">Tim Penilai</span><span class="arrow">→</span><span class="node">Ditetapkan PMK / ditolak</span></div>
+  <p>Usulan disampaikan kepada Menteri Keuangan paling lama <b>6 bulan sejak penetapan BLU</b>. Tim penilai memberikan rekomendasi, lalu Menteri Keuangan menetapkan tarif dengan PMK atau menolak usulan.</p>
+  <h4>Pertimbangan Tarif</h4>
+  <div class="grid4">
+    <div class="card"><h5>Kontinuitas layanan</h5><p>Menopang kemampuan BLU memperoleh pendapatan untuk biaya layanan dan pengembangan.</p></div>
+    <div class="card"><h5>Daya beli masyarakat</h5><p>Memperhitungkan kemampuan dan kemauan masyarakat, perubahan harga, dan nilai mata uang.</p></div>
+    <div class="card"><h5>Keadilan & kepatutan</h5><p>Memastikan pelanggan memperoleh layanan sesuai hak dan manfaat serta memperhatikan kondisi sosial.</p></div>
+    <div class="card"><h5>Persaingan sehat</h5><p>Menjaga praktik bisnis sehat tanpa mengganggu industri/bisnis sejenis.</p></div>
+  </div>
+  <h4>Bentuk Tarif</h4>
+  <p>Tarif dapat berbentuk <b>nilai nominal, persentase, indeks, kurs, atau formula</b>.</p>
+  <div class="callout">Pelaksanaan tarif dilaporkan setiap tahun paling lambat <b>1 bulan setelah tahun anggaran berakhir</b>.</div>
+</article>
+</section>
+
+<section class="section" id="kunci">
+  <div class="summary">
+    <span class="eyebrow" style="color:#cde1f0">KATA KUNCI</span><h2 style="margin:7px 0 0">Wajib Diingat</h2>
+    <div class="summary-points">
+      <span>Pengelola BMN → Menteri Keuangan</span><span>Pengguna BMN → Menteri/pimpinan lembaga</span><span>Asas BMN → 6</span><span>Siklus BMN → 11 kegiatan</span><span>Orientasi BLU → pelayanan & not for profit</span><span>Kekayaan BLU → tidak dipisahkan</span><span>Pendapatan BLU → dapat digunakan langsung sesuai ketentuan</span><span>Syarat BLU → substantif, teknis, administratif</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kuis">
+  <div class="section-head"><div><span class="eyebrow">LATIHAN SOAL</span><h2>Kuis Bab 6</h2></div><span id="qHint" class="pill">Soal 1 dari 25</span></div>
+  <div class="quiz-box" id="quizBox"></div>
+  <div class="quiz-actions"><div class="score" id="scoreText">Skor: 0</div><button id="nextQ" class="btn primary">Jawab & Lanjut</button></div>
+</section>
+</main>
+<footer><span>APBN Learning • Bab 6</span><span>Sumber: Rangkuman Bab 6 Barang Milik Negara dan Badan Layanan Umum — Modul Cerdas Cermat APBN 2026 Edisi V</span></footer>
+<script>
+const state={done:JSON.parse(localStorage.getItem('apbn6v-done')||'{}'),theme:localStorage.getItem('apbn6v-theme')||'light'};
+if(state.theme==='dark')document.body.classList.add('dark');
+function save(){localStorage.setItem('apbn6v-done',JSON.stringify(state.done));updateProgress()}
+function updateProgress(){const buttons=[...document.querySelectorAll('.done-btn')];const done=buttons.filter(b=>!!state.done[b.dataset.id]).length;buttons.forEach(b=>{const d=!!state.done[b.dataset.id];b.classList.toggle('done',d);b.textContent=d?'✓ Selesai':'Tandai selesai'});const pct=Math.round(done/Math.max(buttons.length,1)*100);document.getElementById('progressText').textContent=pct+'% selesai';document.getElementById('progressBar').style.width=pct+'%';}
+document.querySelectorAll('.done-btn').forEach(b=>b.addEventListener('click',()=>{state.done[b.dataset.id]=!state.done[b.dataset.id];save()}));updateProgress();
+document.getElementById('themeBtn').addEventListener('click',()=>{document.body.classList.toggle('dark');state.theme=document.body.classList.contains('dark')?'dark':'light';localStorage.setItem('apbn6v-theme',state.theme)});
+document.querySelectorAll('.tabs').forEach(row=>{const tabs=[...row.querySelectorAll('.tab')];const panels=[...row.parentElement.querySelectorAll('.panel')];tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.toggle('active',x===t));panels.forEach(p=>p.classList.toggle('active',p.dataset.panel===t.dataset.tab))}))});
+function interactive(groupId,resultId){document.querySelectorAll('#'+groupId+' .interactive-card').forEach(card=>card.addEventListener('click',()=>{document.querySelectorAll('#'+groupId+' .interactive-card').forEach(c=>c.classList.remove('selected'));card.classList.add('selected');const r=document.getElementById(resultId);r.textContent=card.dataset.detail || card.dataset.detailtext || '';r.classList.add('show')}))}
+interactive('asasGrid','asasResult');interactive('flexGrid','flexResult');
+const search=document.getElementById('search');search.addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.lesson').forEach(sec=>{sec.style.display=(!q || (sec.dataset.search||'').toLowerCase().includes(q))?'':'none'})});
+const quiz=[
+['BMN didefinisikan sebagai…',['Semua barang yang dibeli atau diperoleh atas beban APBN atau dari perolehan lain yang sah','Hanya tanah dan bangunan pemerintah','Semua aset BUMN','Semua barang yang menghasilkan PNBP'],0,'Definisi BMN pada dokumen mencakup barang dari APBN atau perolehan lain yang sah.'],
+['Salah satu contoh perolehan lain yang sah adalah…',['Hibah atau sumbangan','Belanja rumah tangga','Keuntungan saham pribadi','Iuran siswa'],0,'Dokumen menyebut hibah/sumbangan, kontrak, peraturan perundang-undangan, dan putusan pengadilan berkekuatan hukum tetap.'],
+['Pengelola barang pada pemerintah pusat adalah…',['Menteri Keuangan','Menteri/pimpinan lembaga','Kepala satker','Kepala SKPD'],0,'Untuk pusat, Menteri Keuangan berperan sebagai pengelola barang.'],
+['Pengguna barang pada pemerintah pusat adalah…',['Menteri atau pimpinan lembaga','Gubernur','Sekretaris daerah','Bendahara'],0,'Menteri/pimpinan lembaga = pengguna barang.'],
+['Yang termasuk persediaan BMN adalah…',['ATK, obat-obatan, bahan baku','Tanah dan gedung','Software dan paten','KSP dan sewa'],0,'Persediaan meliputi ATK, obat-obatan, dan bahan baku.'],
+['Software dan paten termasuk…',['Aset tetap','Aset lainnya','Persediaan','Kewajiban'],1,'Dokumen menempatkan aset tak berwujud seperti software dan paten sebagai aset lainnya.'],
+['Jumlah asas pengelolaan BMN adalah…',['4','5','6','7'],2,'Ada 6 asas: fungsional, kepastian hukum, transparansi, efisiensi, akuntabilitas publik, kepastian nilai.'],
+['Asas yang menekankan pengelolaan berdasarkan hukum, kepatutan, dan keadilan adalah…',['Transparansi','Kepastian hukum','Efisiensi','Kepastian nilai'],1,'Itu adalah asas kepastian hukum.'],
+['Asas yang menekankan akurasi jumlah dan nilai aset adalah…',['Kepastian nilai','Fungsional','Akuntabilitas publik','Efisiensi'],0,'Kepastian nilai menjadi dasar untuk neraca dan pemindahtanganan.'],
+['Menurut dokumen, jumlah kegiatan dalam siklus pengelolaan BMN adalah…',['8','9','10','11'],3,'Siklus yang dijelaskan terdiri dari 11 kegiatan.'],
+['Dokumen hasil perencanaan kebutuhan BMN disebut…',['RKBMN','RKA-BLU','DIPA Petikan','LKPP'],0,'Rencana Kebutuhan BMN = RKBMN.'],
+['Yang termasuk pengamanan hukum BMN adalah…',['Memagar kantor','Mengurus sertifikat tanah','Membersihkan komputer','Menyewa gedung'],1,'Pengamanan hukum melindungi status kepemilikan melalui bukti hukum seperti sertifikat.'],
+['Servis AC berkala oleh tenaga terlatih termasuk pemeliharaan…',['Ringan','Sedang','Berat','Administratif'],1,'Dokumen memberi contoh AC sebagai pemeliharaan sedang.'],
+['Pemanfaatan BMN tanpa imbalan untuk waktu tertentu dan harus dikembalikan adalah…',['Sewa','Pinjam Pakai','KSP','KSPI'],1,'Itu definisi Pinjam Pakai.'],
+['Bentuk pemanfaatan BMN yang berfokus pada penyediaan infrastruktur adalah…',['KETUPI','KSPI','Sewa','Hibah'],1,'KSPI = Kerja Sama Penyediaan Infrastruktur.'],
+['Penyertaan modal pemerintah pada BMN menyebabkan…',['Kekayaan tetap tidak dipisahkan','Kekayaan tidak dipisahkan menjadi kekayaan dipisahkan','BMN menjadi persediaan','BMN otomatis menjadi hibah'],1,'Penyertaan modal mengubah kekayaan negara tidak dipisahkan menjadi kekayaan dipisahkan.'],
+['Penatausahaan BMN meliputi…',['Inventarisasi, pembukuan, pelaporan','Sewa, KSP, KSPI','Pengadaan, penjualan, pajak','Hanya audit'],0,'Tiga kegiatan utama penatausahaan adalah inventarisasi, pembukuan, pelaporan.'],
+['BMN idle adalah…',['Kendaraan rusak','Tanah/bangunan yang tidak dipakai untuk tugas K/L','Semua aset yang disewakan','Semua aset BUMN'],1,'Dokumen mendefinisikan BMN idle sebagai tanah/bangunan yang tidak digunakan untuk tugas K/L.'],
+['BLU merupakan…',['Perusahaan swasta','Instansi pemerintah semiotonom tanpa mengutamakan keuntungan','BUMN profit','Organisasi masyarakat'],1,'BLU adalah instansi pemerintah semiotonom untuk pelayanan umum dan not for profit.'],
+['Yang termasuk fleksibilitas BLU adalah…',['Hanya pengadaan','Pendapatan, belanja, kas, dan pengadaan barang/jasa','Hanya pajak','Hanya remunerasi'],1,'Empat area fleksibilitas anggaran tersebut disebut dalam dokumen.'],
+['BLU dapat menggunakan pendapatan layanannya secara langsung untuk membiayai kegiatan. Ini merupakan pengecualian terhadap…',['Asas fungsional','Asas universalitas','Asas kepastian nilai','Asas transparansi'],1,'Dokumen secara eksplisit menyebutnya pengecualian dari asas universalitas.'],
+['Orientasi BUMN pada tabel perbandingan adalah…',['Nonprofit','Not for profit','Profit','Pelayanan tanpa pendapatan'],2,'Dalam tabel: Satker biasa nonprofit, BLU not for profit, BUMN profit.'],
+['Yang BUKAN merupakan syarat BLU adalah…',['Substantif','Teknis','Administratif','Eksternal'],3,'Tiga syarat dalam dokumen: substantif, teknis, administratif.'],
+['Contoh BLU pengelola dana khusus adalah…',['LPDP','Kepala SKPD','KPPN','Sekretaris daerah'],0,'LPDP disebut sebagai contoh pengelola dana khusus.'],
+['Usulan tarif layanan BLU disampaikan kepada Menteri Keuangan paling lama…',['1 bulan sejak penetapan BLU','3 bulan','6 bulan','1 tahun'],2,'Dokumen menyebut paling lama 6 bulan sejak penetapan BLU.'],
+['Salah satu pertimbangan tarif layanan BLU adalah…',['Daya beli masyarakat','Harga saham BUMN','Nilai impor semata','Jumlah pegawai saja'],0,'Pertimbangan tarif mencakup kontinuitas layanan, daya beli, keadilan & kepatutan, dan persaingan sehat.'],
+['Tarif layanan BLU dapat berbentuk…',['Hanya nominal','Nominal, persentase, indeks, kurs, atau formula','Hanya formula','Hanya kurs'],1,'Kelima bentuk tersebut tercantum di dokumen.'],
+['Pelaksanaan tarif BLU dilaporkan paling lambat…',['1 minggu setelah tahun berakhir','1 bulan setelah tahun anggaran berakhir','3 bulan','6 bulan'],1,'Pelaporan dilakukan setiap tahun paling lambat satu bulan setelah tahun anggaran berakhir.']
+];
+let qi=0,score=0,answered=false;
+function renderQ(){answered=false;const q=quiz[qi];document.getElementById('qHint').textContent=`Soal ${qi+1} dari ${quiz.length}`;document.getElementById('quizBox').innerHTML=`<div class="quiz-question">${q[0]}</div>`+q[1].map((o,i)=>`<button class="quiz-option" data-i="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')+`<div class="quiz-feedback" id="feedback"></div>`;document.getElementById('scoreText').textContent=`Skor: ${score}`;document.querySelectorAll('.quiz-option').forEach(b=>b.addEventListener('click',()=>pick(+b.dataset.i)))}
+function pick(i){if(answered)return;answered=true;const q=quiz[qi],correct=q[2];document.querySelectorAll('.quiz-option').forEach((b,idx)=>{if(idx===correct)b.classList.add('correct');if(idx===i&&i!==correct)b.classList.add('wrong')});if(i===correct)score++;const f=document.getElementById('feedback');f.innerHTML=(i===correct?'✅ <b>Benar.</b> ':'❌ <b>Belum tepat.</b> ')+q[3];f.classList.add('show');document.getElementById('scoreText').textContent=`Skor: ${score}`}
+document.getElementById('nextQ').addEventListener('click',()=>{if(document.getElementById('nextQ').textContent==='Ulangi Kuis'){qi=0;score=0;document.getElementById('nextQ').textContent='Jawab & Lanjut';renderQ();return}if(!answered)return;if(qi<quiz.length-1){qi++;renderQ()}else{const nilai=Math.round(score/quiz.length*100);document.getElementById('quizBox').innerHTML=`<div class="quiz-question">Kuis selesai 🎉</div><p>Benar <b>${score}</b> dari <b>${quiz.length}</b> soal.</p><div class="definition"><b>Nilai: ${nilai}/100</b><br>${nilai>=85?'Materi kamu sudah cukup kuat. Coba ulangi soal yang masih salah untuk memastikan detail istilah tidak tertukar.': 'Ulangi kuis dan fokus pada pasangan istilah yang mirip seperti BGS/BSG, KSP/KSPI/KETUPI, serta satker–BLU–BUMN.'}</div>`;document.getElementById('nextQ').textContent='Ulangi Kuis';document.getElementById('qHint').textContent='Selesai'}});
+renderQ();
+</script>
+</body>
+</html>

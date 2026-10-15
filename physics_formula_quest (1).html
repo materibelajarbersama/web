@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Physics Lab — Formula Quest</title>
+<style>
+:root{--bg:#0b1020;--panel:#131b30;--panel2:#19233b;--line:#2b3958;--text:#edf3ff;--muted:#a8b5d2;--cyan:#62e6df;--blue:#8aa7ff;--gold:#ffd166;--red:#ff8292;--green:#80ed99}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172448 0%,var(--bg) 55%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;font-weight:750;transition:transform .12s,filter .12s}button:hover{filter:brightness(1.08);transform:translateY(-1px)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1180px;margin:auto;padding:24px 18px 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#081125;font-size:24px;font-weight:1000}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:900}.brand h1{font-size:clamp(23px,4vw,32px);margin:2px 0 0;letter-spacing:-.04em}.stats{display:flex;gap:9px;flex-wrap:wrap}.pill{border:1px solid var(--line);background:#111a2d;padding:10px 13px;border-radius:13px;min-width:90px}.pill small{display:block;color:var(--muted);font-size:11px}.pill strong{font-size:17px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px}.panel{background:linear-gradient(180deg,rgba(25,35,59,.97),rgba(17,25,44,.97));border:1px solid var(--line);border-radius:20px;box-shadow:0 16px 50px #0002}.sidebar{padding:17px;height:max-content}.section-label{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:850;margin:4px 0 11px}.topic-list{display:grid;gap:8px}.topic{width:100%;text-align:left;background:transparent;color:var(--muted);border:1px solid transparent;display:flex;gap:11px;align-items:center;padding:12px}.topic .emoji{font-size:20px;width:26px;text-align:center}.topic.active{background:#263858;border-color:#47618e;color:var(--text)}.topic span:last-child{display:block}.topic small{display:block;color:var(--muted);font-size:11px;font-weight:500;margin-top:3px}.side-note{margin-top:17px;padding:13px;background:#0e172a;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:12px;line-height:1.5}.main{padding:clamp(17px,3vw,28px);min-width:0}.quest-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.tag{display:inline-flex;align-items:center;gap:6px;background:#233453;border:1px solid #3b5279;color:#cddaff;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.07em}.progress-area{margin:19px 0 23px}.progress-meta{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);margin-bottom:8px}.bar{height:8px;background:#0b1325;border-radius:20px;overflow:hidden;border:1px solid #253451}.bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:20px;transition:width .3s}.question{font-size:clamp(20px,3vw,28px);line-height:1.35;letter-spacing:-.025em;margin:0 0 12px}.context{color:var(--muted);line-height:1.6;margin:0 0 20px;font-size:14px}.formula-card{background:#0c1528;border:1px solid #2d4267;border-radius:15px;padding:15px 16px;margin:0 0 20px}.formula-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.formula-head strong{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan)}.formula-equation{font-size:clamp(19px,3vw,25px);font-weight:850;letter-spacing:.01em;margin:6px 0 7px}.formula-desc{font-size:12px;color:var(--muted);line-height:1.5}.tiny-btn{padding:6px 9px;background:#253655;color:var(--text);font-size:11px;border:1px solid #3a5279}.answer-area{display:flex;gap:9px;flex-wrap:wrap}.answer-area input{flex:1;min-width:160px;background:#0c1426;border:1px solid #344565;color:var(--text);border-radius:12px;padding:13px 14px}.primary{background:linear-gradient(135deg,var(--cyan),#8cfff0);color:#071326}.secondary{background:#263653;color:var(--text);border:1px solid #405477}.feedback{display:none;margin-top:14px;padding:13px 15px;border-radius:13px;line-height:1.5;font-size:14px}.feedback.show{display:block}.feedback.good{background:#123326;border:1px solid #286b4b;color:#c9ffdd}.feedback.bad{background:#381c2b;border:1px solid #7a344e;color:#ffd4dd}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.mini{padding:17px}.mini h3{font-size:14px;margin:0 0 9px}.mini p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}.formula-collection{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.formula-chip{font-size:11px;color:#cddaff;background:#1b2b48;border:1px solid #344c72;padding:7px 9px;border-radius:9px}.formula-chip.hidden{color:#7785a2;background:#111a2b;border-style:dashed}.toast{position:fixed;right:18px;bottom:18px;background:#182743;border:1px solid #3b5279;padding:12px 16px;border-radius:13px;box-shadow:0 10px 30px #0005;display:none}.toast.show{display:block;animation:fade .25s}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.foot{color:#8291af;text-align:center;font-size:11px;margin-top:18px}.reset{font-size:11px;color:var(--muted);background:transparent;padding:8px}.modal-note{font-size:12px;color:var(--muted);margin-top:9px}
+@media(max-width:780px){.layout{grid-template-columns:1fr}.sidebar{padding:13px}.topic-list{grid-template-columns:repeat(2,minmax(0,1fr))}.topic{padding:9px}.side-note{display:none}.bottom-grid{grid-template-columns:1fr}.stats{width:100%}.pill{flex:1}}
+
+/* Light theme refresh */
+:root{--bg:#f3f7fc;--panel:#ffffff;--panel2:#edf4fb;--line:#d6e0ed;--text:#17253b;--muted:#607089;--cyan:#087f8c;--blue:#4568d4;--gold:#a66a00;--red:#b42345;--green:#18794e}
+body{background:radial-gradient(ellipse at top,#e4f5fb 0%,var(--bg) 58%);color:var(--text)}
+.pill{background:#f8fbff}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(248,251,255,.99));box-shadow:0 12px 35px #243c5a12}
+.topic{color:var(--muted)}.topic.active{background:#e2f2fa;border-color:#9acddd;color:#163b56}
+.side-note{background:#f1f7fc;color:var(--muted)}
+.tag{background:#eaf0ff;border-color:#c8d5fb;color:#344d9b}
+.bar{background:#e5edf6;border-color:#d1ddeb}
+.formula-card{background:#f3f8fc;border-color:#d2e1ee}
+.formula-head strong{color:#087f8c}
+.answer-area input{background:#fff;border-color:#cbd8e6;color:#17253b}
+.tiny-btn{background:#e5edf8;color:#243b5c;border-color:#cbd8e8}
+.primary{background:linear-gradient(135deg,#54d6d0,#9cebe2);color:#12333b}
+.secondary{background:#e8eef7;color:#243b5c;border:1px solid #ccd8e8}
+.feedback.good{background:#e8f8ee;border-color:#a7dfba;color:#175b35}
+.feedback.bad{background:#fff0f2;border-color:#f0b7c2;color:#8d2138}
+.formula-chip{color:#344d9b;background:#edf2ff;border-color:#d0daf5}
+.formula-chip.hidden{color:#78879c;background:#f1f4f8}
+.toast{background:#fff;border-color:#d2deeb;color:#20334e;box-shadow:0 10px 30px #243c5a20}
+.foot{color:#718198}
+.modal-note{color:var(--muted)}
+.logo{color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">Φ</div><div><div class="eyebrow">Interactive physics practice</div><h1>Physics Lab <span style="color:var(--cyan)">/ Formula Quest</span></h1></div></div>
+    <div class="stats"><div class="pill"><small>EXPERIENCE</small><strong id="xp">0 XP</strong></div><div class="pill"><small>LEVEL</small><strong id="level">1 · Rookie</strong></div><div class="pill"><small>STREAK</small><strong id="streak">0 🔥</strong></div></div>
+  </header>
+  <div class="layout">
+    <aside class="panel sidebar"><div class="section-label">Choose your lab</div><div class="topic-list" id="topicList"></div><div class="side-note"><strong style="color:var(--text)">How the quest works</strong><br>Start with formulas visible. Earn XP to gradually hide more support. Try solving from memory, but you can reveal a formula whenever you need it. Wrong answers are practice, not failure.</div><button class="reset" id="resetBtn">↻ Reset progress</button></aside>
+    <main class="panel main">
+      <div class="quest-top"><span class="tag" id="topicTag">🌡️ Thermodynamics</span><span class="tag" id="difficultyTag">RANK I · WARM-UP</span></div>
+      <div class="progress-area"><div class="progress-meta"><span id="progressLabel">Question 1 in this run</span><span id="accuracyLabel">Accuracy: —</span></div><div class="bar"><div id="progressBar"></div></div></div>
+      <h2 class="question" id="question">Loading question…</h2><p class="context" id="context"></p>
+      <section class="formula-card" id="formulaCard"><div class="formula-head"><strong id="formulaLabel">Formula support · full</strong><button class="tiny-btn" id="revealBtn">Reveal formula</button></div><div class="formula-equation" id="formulaEquation"></div><div class="formula-desc" id="formulaDesc"></div></section>
+      <form id="answerForm"><div class="answer-area"><input id="answerInput" autocomplete="off" inputmode="decimal" placeholder="Type your numerical answer…" aria-label="Your answer"/><button class="primary" type="submit" id="checkBtn">Check answer ↗</button></div></form>
+      <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      <div class="actions"><button class="secondary" id="nextBtn" style="display:none">Next question →</button><button class="secondary" id="skipBtn">Skip question</button><button class="secondary" id="unitBtn">Need a unit reminder?</button></div>
+      <div class="modal-note" id="unitNote" style="display:none">Use SI units: mass in kg, distance in m, time in s, pressure in Pa, energy in J, charge in C, and temperature differences in °C or K.</div>
+      <div class="bottom-grid"><section class="panel mini"><h3>🧠 Your formula memory</h3><p id="memoryText">All formulas are visible at the beginning. As you earn XP, individual formulas gradually move to recall mode.</p><div class="formula-collection" id="formulaCollection"></div></section><section class="panel mini"><h3>🎯 Study tip</h3><p id="studyTip">Before calculating, write down what is given, what you need to find, and which physical idea connects them. Then check your units.</p></section></div>
+    </main>
+  </div>
+  <div class="foot">Made for practice · Use 3.14 for π when needed · Answers allow small rounding differences</div>
+</div><div class="toast" id="toast"></div>
+<script>
+const topics=[
+ {id:'thermo',name:'Thermodynamics',icon:'🌡️',sub:'Heat & energy',tip:'First decide whether the temperature changes or the material changes state. Those are different situations.'},
+ {id:'mechanics',name:'Mechanics',icon:'⚙️',sub:'Motion & forces',tip:'Draw the situation and keep track of units. Speed, acceleration, force, and energy are different quantities.'},
+ {id:'em',name:'Electromagnetism',icon:'⚡',sub:'Circuits & charge',tip:'For circuits, identify whether values are voltage, current, or resistance. Keep units consistent.'},
+ {id:'fluids',name:'Fluid physics',icon:'🌊',sub:'Pressure & flow',tip:'Pressure depends on force per area; liquid pressure also increases with depth.'},
+ {id:'optics',name:'Optics',icon:'🔭',sub:'Light & lenses',tip:'Draw a quick ray diagram when possible. Remember that focal length and image distance are not the same thing.'},
+ {id:'modern',name:'Modern physics',icon:'☄️',sub:'Photons & atoms',tip:'Keep tiny quantities and powers of ten visible in your working. Convert nanometres to metres carefully.'}
+];
+const formulas={
+ heat:{name:'Heating / cooling',eq:'Q = mcΔT',desc:'Q: energy (J) · m: mass (kg) · c: specific heat capacity · ΔT: temperature change',hideAt:60,unit:'J'},
+ latent:{name:'Change of state',eq:'Q = mL',desc:'Q: energy (J) · m: mass (kg) · L: specific latent heat (J/kg)',hideAt:120,unit:'J'},
+ workgas:{name:'Work by a gas at constant pressure',eq:'W = PΔV',desc:'W: work (J) · P: pressure (Pa) · ΔV: change in volume (m³)',hideAt:180,unit:'J'},
+ firstlaw:{name:'First law of thermodynamics',eq:'ΔU = Q − W',desc:'ΔU: change in internal energy · Q: heat added · W: work done by the system',hideAt:240,unit:'J'},
+ speed:{name:'Average speed',eq:'v = d / t',desc:'v: speed (m/s) · d: distance (m) · t: time (s)',hideAt:300,unit:'m/s'},
+ accel:{name:'Acceleration',eq:'a = Δv / t',desc:'a: acceleration (m/s²) · Δv: change in velocity · t: time (s)',hideAt:360,unit:'m/s²'},
+ force:{name:'Newton’s second law',eq:'F = ma',desc:'F: net force (N) · m: mass (kg) · a: acceleration (m/s²)',hideAt:420,unit:'N'},
+ kinetic:{name:'Kinetic energy',eq:'Eₖ = ½mv²',desc:'Eₖ: kinetic energy (J) · m: mass (kg) · v: speed (m/s)',hideAt:480,unit:'J'},
+ ohm:{name:'Ohm’s law',eq:'V = IR',desc:'V: voltage (V) · I: current (A) · R: resistance (Ω)',hideAt:540,unit:'V'},
+ power:{name:'Electrical power',eq:'P = VI',desc:'P: power (W) · V: voltage (V) · I: current (A)',hideAt:600,unit:'W'},
+ pressure:{name:'Pressure',eq:'P = F / A',desc:'P: pressure (Pa) · F: force (N) · A: area (m²)',hideAt:660,unit:'Pa'},
+ hydro:{name:'Liquid pressure (gauge)',eq:'P = ρgh',desc:'ρ: density (kg/m³) · g: gravitational field strength · h: depth (m)',hideAt:720,unit:'Pa'},
+ lens:{name:'Thin lens equation',eq:'1/f = 1/dₒ + 1/dᵢ',desc:'f: focal length · dₒ: object distance · dᵢ: image distance (use consistent distance units)',hideAt:780,unit:'cm'},
+ wave:{name:'Wave equation',eq:'v = fλ',desc:'v: wave speed (m/s) · f: frequency (Hz) · λ: wavelength (m)',hideAt:840,unit:'m/s'},
+ photon:{name:'Photon energy',eq:'E = hf',desc:'E: photon energy (J) · h: Planck’s constant · f: frequency (Hz)',hideAt:900,unit:'J'},
+ einstein:{name:'Mass–energy equivalence',eq:'E = mc²',desc:'E: energy (J) · m: mass (kg) · c: speed of light (m/s)',hideAt:960,unit:'J'}
+};
+const bank={
+ thermo:[
+  {f:'heat',q:()=>{let m=pick([0.5,1,2,3]),c=4200,dt=pick([10,15,20,25,30]);return {text:`How much energy is needed to heat ${m} kg of water by ${dt}°C?`,given:`Use the specific heat capacity of water: 4,200 J/(kg·°C).`,answer:m*c*dt,unit:'J',why:`The water’s temperature changes without a change of state. The energy required is ${m} × 4,200 × ${dt} = ${fmt(m*c*dt)} J.`}}},
+  {f:'heat',q:()=>{let Q=pick([6000,12000,18000,24000]),m=pick([0.5,1,2]),dt=Q/(m*600);return {text:`A ${m} kg solid absorbs ${Q.toLocaleString()} J and warms by ${dt}°C. Find its specific heat capacity.`,given:`Give your answer in J/(kg·°C).`,answer:600,unit:'J/(kg·°C)',why:`Rearrange the heating relationship to get c = Q/(mΔT) = ${Q}/(${m} × ${dt}) = 600 J/(kg·°C).`}}},
+  {f:'latent',q:()=>{let m=pick([0.2,0.5,1,2]),L=334000;return {text:`How much energy melts ${m} kg of ice already at its melting point?`,given:`Specific latent heat of fusion of ice = 334,000 J/kg.`,answer:m*L,unit:'J',why:`During melting, the temperature stays constant. Energy = ${m} × 334,000 = ${fmt(m*L)} J.`}}},
+  {f:'firstlaw',q:()=>{let Q=pick([300,500,800,1200]),W=pick([100,150,200,300]);return {text:`A gas absorbs ${Q} J of heat and does ${W} J of work. What is its change in internal energy?`,given:`Treat heat added to the gas as positive and work done by the gas as positive.`,answer:Q-W,unit:'J',why:`The gas stores the heat that remains after doing work: ${Q} − ${W} = ${Q-W} J.`}}},
+  {f:'workgas',q:()=>{let P=pick([50000,100000,150000,200000]),v1=pick([0.01,0.02,0.03]),dv=pick([0.01,0.02,0.03]);return {text:`A gas expands at constant pressure ${P.toLocaleString()} Pa from ${v1.toFixed(2)} m³ to ${(v1+dv).toFixed(2)} m³. Find the work it does.`,given:`Assume pressure stays constant throughout the expansion.`,answer:P*dv,unit:'J',why:`The volume change is ${dv.toFixed(2)} m³, so work = ${P} × ${dv.toFixed(2)} = ${fmt(P*dv)} J.`}}}
+ ],
+ mechanics:[
+  {f:'speed',q:()=>{let d=pick([100,150,240,500,1200]),t=pick([10,20,30,40,60]);return {text:`A cyclist travels ${d} m in ${t} s. What is their average speed?`,given:'Answer in m/s.',answer:d/t,unit:'m/s',why:`Average speed is distance divided by time: ${d}/${t} = ${fmt(d/t)} m/s.`}}},
+  {f:'accel',q:()=>{let vi=pick([0,2,4,5]),vf=pick([10,12,15,20]),t=pick([2,4,5]);return {text:`A cart speeds up from ${vi} m/s to ${vf} m/s in ${t} s. Find its average acceleration.`,given:'Answer in m/s².',answer:(vf-vi)/t,unit:'m/s²',why:`Change in velocity is ${vf} − ${vi} = ${vf-vi} m/s. Divide by ${t} s to get ${fmt((vf-vi)/t)} m/s².`}}},
+  {f:'force',q:()=>{let m=pick([2,4,5,8,10]),a=pick([2,3,4,6]);return {text:`A ${m} kg object accelerates at ${a} m/s². What net force acts on it?`,given:'Answer in newtons (N).',answer:m*a,unit:'N',why:`Net force = mass × acceleration = ${m} × ${a} = ${m*a} N.`}}},
+  {f:'kinetic',q:()=>{let m=pick([2,4,5,10]),v=pick([2,3,4,5,6]);return {text:`A ${m} kg object moves at ${v} m/s. Find its kinetic energy.`,given:'Answer in joules (J).',answer:0.5*m*v*v,unit:'J',why:`Kinetic energy = ½ × ${m} × ${v}² = ${fmt(0.5*m*v*v)} J.`}}}
+ ],
+ em:[
+  {f:'ohm',q:()=>{let I=pick([0.2,0.5,1,2,3]),R=pick([2,4,5,6,10,12]);return {text:`A resistor of ${R} Ω carries a current of ${I} A. What is the voltage across it?`,given:'Answer in volts (V).',answer:I*R,unit:'V',why:`Voltage = current × resistance = ${I} × ${R} = ${I*R} V.`}}},
+  {f:'ohm',q:()=>{let V=pick([6,9,12,18,24]),R=pick([2,3,4,6,8]);return {text:`A ${R} Ω resistor is connected to a ${V} V supply. What current flows?`,given:'Answer in amperes (A).',answer:V/R,unit:'A',why:`Current = voltage divided by resistance = ${V}/${R} = ${fmt(V/R)} A.`}}},
+  {f:'power',q:()=>{let V=pick([5,9,12,24]),I=pick([0.5,1,2,3]);return {text:`A device operates at ${V} V and draws ${I} A. Find its electrical power.`,given:'Answer in watts (W).',answer:V*I,unit:'W',why:`Power = voltage × current = ${V} × ${I} = ${V*I} W.`}}}
+ ],
+ fluids:[
+  {f:'pressure',q:()=>{let F=pick([100,200,500,800,1000]),A=pick([0.01,0.02,0.05,0.1]);return {text:`A force of ${F} N acts evenly on an area of ${A} m². Find the pressure.`,given:'Answer in pascals (Pa).',answer:F/A,unit:'Pa',why:`Pressure = force divided by area = ${F}/${A} = ${fmt(F/A)} Pa.`}}},
+  {f:'hydro',q:()=>{let rho=pick([1000,800,1200]),h=pick([1,2,3,5]),g=10;return {text:`Find the gauge pressure ${h} m below the surface of a liquid with density ${rho} kg/m³.`,given:'Use g = 10 m/s². Ignore atmospheric pressure.',answer:rho*g*h,unit:'Pa',why:`Liquid gauge pressure = density × g × depth = ${rho} × 10 × ${h} = ${rho*g*h} Pa.`}}},
+  {f:'pressure',q:()=>{let P=pick([2000,5000,10000]),A=pick([0.02,0.05,0.1]);return {text:`A pressure of ${P} Pa acts over an area of ${A} m². What force is applied?`,given:'Answer in newtons (N).',answer:P*A,unit:'N',why:`Rearrange pressure = force/area, giving force = pressure × area = ${P} × ${A} = ${fmt(P*A)} N.`}}}
+ ],
+ optics:[
+  {f:'wave',q:()=>{let pair=pick([[4e14,700e-9],[5e14,600e-9],[6e14,500e-9],[7.5e14,400e-9]]),f=pair[0],lam=pair[1];return {text:`Light has frequency ${(f/1e12).toFixed(f%1e12?1:0)} THz and wavelength ${(lam*1e9).toFixed(0)} nm. Calculate its wave speed.`,given:'Convert THz to Hz and nm to m. Answer in m/s.',answer:f*lam,unit:'m/s',why:`Convert frequency to Hz and wavelength to metres, then multiply them: ${f.toExponential(2)} × ${lam.toExponential(2)} = ${fmt(f*lam)} m/s.`}}},
+  {f:'lens',q:()=>{let f=pick([10,12,15,20]),do_=pick([30,40,60]);let di=1/(1/f-1/do_);return {text:`A converging lens has focal length ${f} cm. An object is ${do_} cm from the lens. Find the image distance for a real image.`,given:'Use the thin-lens equation and answer in cm. Round to 1 decimal place.',answer:di,unit:'cm',why:`Using 1/di = 1/f − 1/do = 1/${f} − 1/${do_}, the image distance is about ${di.toFixed(1)} cm.`}}},
+  {f:'wave',q:()=>{let freq=pick([100,200,400,500]),lam=pick([0.5,1,1.5,2]);return {text:`A wave has frequency ${freq} Hz and wavelength ${lam} m. Calculate its speed.`,given:'Answer in m/s.',answer:freq*lam,unit:'m/s',why:`Wave speed = frequency × wavelength = ${freq} × ${lam} = ${freq*lam} m/s.`}}}
+ ],
+ modern:[
+  {f:'photon',q:()=>{let h=6.63e-34,f=pick([3,4,5,6,8])*1e14;return {text:`A photon has frequency ${(f/1e14).toFixed(0)} × 10¹⁴ Hz. Estimate its energy.`,given:'Use Planck’s constant h = 6.63 × 10⁻³⁴ J·s. Answer in joules, using scientific notation.',answer:h*f,unit:'J',why:`Photon energy = hf = 6.63 × 10⁻³⁴ × ${f.toExponential(0)} ≈ ${(h*f).toExponential(2)} J.`}}},
+  {f:'einstein',q:()=>{let m=pick([1,2,3,5])*1e-6,c=3e8;return {text:`If ${m.toExponential(0)} kg of mass were fully converted to energy, how much energy would be released?`,given:'Use c = 3 × 10⁸ m/s. Answer in joules.',answer:m*c*c,unit:'J',why:`Mass–energy equivalence gives E = mc² = ${m.toExponential(0)} × (3 × 10⁸)² = ${(m*c*c).toExponential(2)} J.`}}},
+  {f:'photon',q:()=>{let h=6.63e-34,f=pick([2,3,5,7])*1e15;return {text:`A photon has frequency ${(f/1e15).toFixed(0)} × 10¹⁵ Hz. Find its energy.`,given:'Use h = 6.63 × 10⁻³⁴ J·s. Answer in scientific notation.',answer:h*f,unit:'J',why:`Multiply Planck’s constant by frequency: 6.63 × 10⁻³⁴ × ${f.toExponential(0)} = ${(h*f).toExponential(2)} J.`}}}
+ ]
+};
+function pick(a){return a[Math.floor(Math.random()*a.length)]}function fmt(n){if(Math.abs(n)>=1e6|| (Math.abs(n)>0&&Math.abs(n)<0.01))return n.toExponential(3);return Number(n.toFixed(4)).toLocaleString('en-US',{maximumFractionDigits:4})}
+let state={xp:0,streak:0,correct:0,attempts:0,topic:'thermo',q:null,answered:false,revealed:false,used:new Set(),runCount:0,topicCount:{}};
+const $=id=>document.getElementById(id);
+function rank(){if(state.xp<100)return [1,'Rookie'];if(state.xp<250)return [2,'Apprentice'];if(state.xp<450)return [3,'Problem Solver'];if(state.xp<700)return [4,'Lab Specialist'];if(state.xp<1000)return [5,'Physicist'];return [6,'Legend'];}
+function renderTopics(){$('topicList').innerHTML=topics.map(t=>`<button class="topic ${state.topic===t.id?'active':''}" data-topic="${t.id}"><span class="emoji">${t.icon}</span><span>${t.name}<small>${t.sub}</small></span></button>`).join('');document.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{state.topic=b.dataset.topic;newQuestion();renderTopics();});}
+function support(f){const F=formulas[f];if(state.xp<F.hideAt)return {mode:0,label:'Formula support · full',eq:F.eq,desc:F.desc};if(state.xp<F.hideAt+80)return {mode:1,label:'Formula support · equation hidden',eq:'Formula hidden 🔒',desc:`Recall the relationship for: ${F.name}. You can reveal it if you get stuck.`};if(state.xp<F.hideAt+180)return {mode:2,label:'Formula support · recall mode',eq:'Name: '+F.name,desc:'Equation hidden. Try to write it from memory, then solve.'};return {mode:3,label:'Formula support · challenge mode',eq:'No formula shown',desc:'Challenge mode: retrieve the equation and solve without a prompt.'};}
+function showFormula(force=false){let s=support(state.q.f);if(force||state.revealed){$('formulaLabel').textContent='Formula support · revealed';$('formulaEquation').textContent=formulas[state.q.f].eq;$('formulaDesc').textContent=formulas[state.q.f].desc;$('revealBtn').textContent='Hide formula';}else{$('formulaLabel').textContent=s.label;$('formulaEquation').textContent=s.eq;$('formulaDesc').textContent=s.desc;$('revealBtn').textContent=s.mode===0?'Hide formula':'Reveal formula';}}
+function newQuestion(){state.answered=false;state.revealed=false;state.q=pick(bank[state.topic]).q();state.runCount++;state.topicCount[state.topic]=(state.topicCount[state.topic]||0)+1;$('topicTag').textContent=topics.find(t=>t.id===state.topic).icon+' '+topics.find(t=>t.id===state.topic).name;$('difficultyTag').textContent=state.xp<100?'RANK I · WARM-UP':state.xp<300?'RANK II · PRACTICE':state.xp<600?'RANK III · ADVANCED':'RANK IV · CHALLENGE';$('question').textContent=state.q.text;$('context').textContent=state.q.given;$('answerInput').value='';$('answerInput').disabled=false;$('checkBtn').disabled=false;$('checkBtn').textContent='Check answer ↗';$('feedback').className='feedback';$('feedback').textContent='';$('nextBtn').style.display='none';$('skipBtn').style.display='inline-block';$('unitNote').style.display='none';$('progressLabel').textContent=`Question ${state.topicCount[state.topic]||1} in this lab`;$('progressBar').style.width=Math.min(100,((state.xp%1000)/1000)*100)+'%';showFormula();renderStats();renderCollection();$('studyTip').textContent=topics.find(t=>t.id===state.topic).tip;}
+function renderStats(){let [n,r]=rank();$('xp').textContent=state.xp+' XP';$('level').textContent=n+' · '+r;$('streak').textContent=state.streak+' 🔥';$('accuracyLabel').textContent='Accuracy: '+(state.attempts?Math.round(state.correct/state.attempts*100)+'%':'—');}
+function renderCollection(){let hidden=Object.keys(formulas).filter(k=>support(k).mode>0).length;let total=Object.keys(formulas).length;$('memoryText').textContent=`${total-hidden} of ${total} formulas currently fully visible. ${hidden} have entered recall mode as your XP grows.`;$('formulaCollection').innerHTML=Object.entries(formulas).map(([k,f])=>{let s=support(k);return `<span class="formula-chip ${s.mode?'hidden':''}" title="${s.mode?'Recall mode':'Visible formula'}">${s.mode?'🔒 ':''}${f.name}</span>`}).join('');}
+function check(e){e.preventDefault();if(state.answered)return;let raw=$('answerInput').value.trim().replace(/,/g,'').replace(/−/g,'-');if(!raw){$('answerInput').focus();return;}let val=Number(raw.replace(/×10\^?(-?\d+)/i,'e$1'));if(!Number.isFinite(val)){showFeedback(false,'Please enter a numerical answer. For scientific notation, try e.g. 2.1e-19.');return;}state.attempts++;let tol=Math.max(Math.abs(state.q.answer)*0.025,0.000001);let ok=Math.abs(val-state.q.answer)<=tol;state.answered=true;$('answerInput').disabled=true;$('checkBtn').disabled=true;$('nextBtn').style.display='inline-block';$('skipBtn').style.display='none';if(ok){state.correct++;state.streak++;let earned=10+(state.streak>=3?5:0);state.xp+=earned;showFeedback(true,`Correct! +${earned} XP${state.streak>=3?' (streak bonus!)':''}<br><br>${state.q.why}`);toast('+'+earned+' XP — nice work!');}else{state.streak=0;showFeedback(false,`Not quite. The answer is approximately <strong>${fmt(state.q.answer)} ${state.q.unit}</strong>.<br><br>${state.q.why}<br><br>Every mistake is useful practice — look at the steps, then try another one.`);}renderStats();renderCollection();$('progressBar').style.width=Math.min(100,((state.xp%1000)/1000)*100)+'%';showFormula();}
+function showFeedback(ok,html){$('feedback').className='feedback show '+(ok?'good':'bad');$('feedback').innerHTML=html;}
+function toast(s){$('toast').textContent=s;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
+$('answerForm').addEventListener('submit',check);$('nextBtn').onclick=newQuestion;$('skipBtn').onclick=()=>{state.streak=0;newQuestion()};$('revealBtn').onclick=()=>{state.revealed=!state.revealed;showFormula();};$('unitBtn').onclick=()=>{$('unitNote').style.display=$('unitNote').style.display==='none'?'block':'none'};$('resetBtn').onclick=()=>{if(confirm('Reset all XP, streak, and accuracy?')){state={xp:0,streak:0,correct:0,attempts:0,topic:'thermo',q:null,answered:false,revealed:false,used:new Set(),runCount:0,topicCount:{}};renderTopics();newQuestion();}};
+renderTopics();newQuestion();
+</script>
+</body>
+</html>
